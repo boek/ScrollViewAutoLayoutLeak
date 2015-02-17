@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		42DED9801A93C2D600363085 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DED97F1A93C2D600363085 /* AppDelegate.swift */; };
 		42DED9821A93C2D600363085 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DED9811A93C2D600363085 /* ViewController.swift */; };
-		42DED9851A93C2D600363085 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DED9831A93C2D600363085 /* Main.storyboard */; };
 		42DED9871A93C2D600363085 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42DED9861A93C2D600363085 /* Images.xcassets */; };
 		42DED98A1A93C2D600363085 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DED9881A93C2D600363085 /* LaunchScreen.xib */; };
 		42DED9961A93C2D700363085 /* AutoLayoutScrollViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DED9951A93C2D700363085 /* AutoLayoutScrollViewTests.swift */; };
@@ -30,7 +29,6 @@
 		42DED97E1A93C2D600363085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DED97F1A93C2D600363085 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42DED9811A93C2D600363085 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		42DED9841A93C2D600363085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42DED9861A93C2D600363085 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		42DED9891A93C2D600363085 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		42DED98F1A93C2D700363085 /* AutoLayoutScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +77,6 @@
 			children = (
 				42DED97F1A93C2D600363085 /* AppDelegate.swift */,
 				42DED9811A93C2D600363085 /* ViewController.swift */,
-				42DED9831A93C2D600363085 /* Main.storyboard */,
 				42DED9861A93C2D600363085 /* Images.xcassets */,
 				42DED9881A93C2D600363085 /* LaunchScreen.xib */,
 				42DED97D1A93C2D600363085 /* Supporting Files */,
@@ -192,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DED9851A93C2D600363085 /* Main.storyboard in Resources */,
 				42DED98A1A93C2D600363085 /* LaunchScreen.xib in Resources */,
 				42DED9871A93C2D600363085 /* Images.xcassets in Resources */,
 			);
@@ -236,14 +232,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		42DED9831A93C2D600363085 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				42DED9841A93C2D600363085 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		42DED9881A93C2D600363085 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

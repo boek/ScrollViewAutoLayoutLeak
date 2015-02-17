@@ -8,6 +8,54 @@
 
 import UIKit
 
+class MainViewController: UIViewController {
+
+    var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        scrollView.backgroundColor = UIColor.purpleColor()
+
+        return scrollView
+    }()
+
+    var viewOne: UIView = {
+        let view = UIView()
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.backgroundColor = UIColor.blueColor()
+
+        return view
+    }()
+
+
+    override init() {
+        super.init(nibName: nil, bundle: nil)
+
+        scrollView.addSubview(viewOne)
+        view.addSubview(scrollView)
+
+        setupConstraints()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activateConstraints([
+            NSLayoutConstraint(item: scrollView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: scrollView, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: scrollView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: scrollView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0.0),
+
+            NSLayoutConstraint(item: viewOne, attribute: .Top, relatedBy: .Equal, toItem: scrollView, attribute: .Top, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: viewOne, attribute: .Right, relatedBy: .Equal, toItem: scrollView, attribute: .Right, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: viewOne, attribute: .Bottom, relatedBy: .Equal, toItem: scrollView, attribute: .Bottom, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: viewOne, attribute: .Left, relatedBy: .Equal, toItem: scrollView, attribute: .Left, multiplier: 1.0, constant: 0.0),
+            NSLayoutConstraint(item: viewOne, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: 800.0)
+        ])
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +63,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = MainViewController()
+        window?.makeKeyAndVisible()
+
         return true
     }
 
